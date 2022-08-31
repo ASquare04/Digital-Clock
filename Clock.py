@@ -30,7 +30,6 @@ def Date():
     yy.config(text=year)
     day.config(text=dayy)
 
-
 display = Tk()
 
 display.geometry("760x500+325+150")
@@ -38,7 +37,7 @@ display.resizable(False,False)
 
 display.title(' Digi Clock')
 display.config(bg = 'black')
-display.protocol("WM_DELETE_WINDOW",disable)
+#display.protocol("WM_DELETE_WINDOW",disable)
 
 hh = Label(display,text ="00", font=("ComicSansms 40 bold"), bg = 'black' , fg = 'cyan', borderwidth = 6, relief = RAISED)
 hh.place(x=140,y=50,height=80,width=80)
@@ -95,7 +94,7 @@ Date()
 def Dest():
     display.destroy()
 
-cls = Button(display,text = "CLOSE",  font=("ComicSansms 12 bold"), bg = 'black', fg = 'orange', command = Dest)
-cls.place(x=340,y=450)
+clr = Button(display,text = "CLOSE",  font=("ComicSansms 12 bold"), bg = 'black', fg = 'orange', command = Dest)
+clr.place(x=340,y=450)
 
 display.mainloop()
